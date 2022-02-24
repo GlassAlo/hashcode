@@ -61,9 +61,9 @@ while i_arr < contributor_nbr:
     i_arr += 1
 print(contrib_array)
 print(contributor_nbr)
-print(contrib_array[i_arr][0])
 # Retun a contributor who has the shill C++
-for i_arr in range(len(contrib_array)):
+for i_arr in range(i_arr, len(contrib_array)):
+    print(contrib_array[i_arr][0])
     for i in range(0, contributor_nbr):
         for y in range(len(contrib_array[i])):
             if contrib_array[i][y].split(' ')[0] == contrib_array[i_arr][1].split(' ')[0]:
