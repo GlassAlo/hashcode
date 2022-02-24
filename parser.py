@@ -1,5 +1,6 @@
 from asyncio.windows_events import NULL
 from operator import concat
+from os import sep
 import sys
 import skill
 import contributor
@@ -59,12 +60,13 @@ i_arr = 0
 line_count = 1
 while i_arr < contributor_nbr:
     i_arr += 1
-print(contrib_array)
 print(contributor_nbr)
 # Retun a contributor who has the shill C++
 for i_arr in range(i_arr, len(contrib_array)):
     print(contrib_array[i_arr][0])
     for i in range(0, contributor_nbr):
         for y in range(len(contrib_array[i])):
-            if contrib_array[i][y].split(' ')[0] == contrib_array[i_arr][1].split(' ')[0]:
-                print(contrib_array[i][0])
+            for x in range(len(contrib_array[i_arr])):
+                if contrib_array[i][y].split(' ')[0] == contrib_array[i_arr][x].split(' ')[0]:
+                    print(contrib_array[i][0], end=' ')
+    print("\n", end='')
